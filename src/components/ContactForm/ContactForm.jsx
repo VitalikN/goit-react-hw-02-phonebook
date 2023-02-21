@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import { Form, Container, Label, Input, Button } from './ContactForm.styled';
-
+import PropTypes from 'prop-types';
+import { Form, Container, Label, Input, Chip } from './ContactForm.styled';
+import { MdAddIcCall } from 'react-icons/md';
 export class ContactForm extends Component {
   state = {
     name: '',
@@ -55,8 +56,13 @@ export class ContactForm extends Component {
             />
           </Label>
         </Container>
-        <Button type="submit">Add Contact</Button>
+        <Chip type="submit">
+          <MdAddIcCall />
+        </Chip>
       </Form>
     );
   }
 }
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

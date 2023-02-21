@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { FiTrash2 } from 'react-icons/fi';
 
-import { List, Item, Button } from './Contacts.styled';
+import { List, Item, Chip } from './Contacts.styled';
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <div>
@@ -10,12 +12,22 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
             <p>
               {name}: {number}
             </p>
-            <Button type="button" onClick={() => onDeleteContact(id)}>
-              видалити
-            </Button>
+            <Chip>
+              <FiTrash2 type="button" onClick={() => onDeleteContact(id)} />
+            </Chip>
           </Item>
         ))}
       </List>
     </div>
   );
+};
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onDeleteContact: PropTypes.func.isRequired,
 };

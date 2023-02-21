@@ -11,27 +11,32 @@ export const Item = styled.li`
   margin: 5px;
 `;
 
-export const Button = styled.button`
+export const Chip = styled.span`
   text-align: center;
 
-  display: inline-block;
+  display: flex;
+
   border: none;
   outline: none;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 8px;
+  padding: 4px;
   font-size: 16px;
   text-decoration: none;
-  margin: 5px;
+  margin: 4px;
   color: white;
   background: #7ca78c;
 
   box-shadow: rgb(0 0 0 / 64%) 10px 10px 5px 0px;
   transition: 0.3s;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
   &:hover {
     background: #8ebe9f;
     box-shadow: rgb(0 0 0 / 64%) 10px 10px 5px 0px;
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    transform: scale(1.15);
+    transform: scale(1.3);
   }
 `;

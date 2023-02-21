@@ -28,7 +28,7 @@ export const Input = styled.input`
   padding: 10px;
   border: none;
   outline: none;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: inset 0 2px 10px 1px rgba(0, 0, 0, 0.189),
     inset 0 0 0 60px rgba(0, 0, 0, 0.189), 0 1px rgba(46, 186, 104, 0.08);
 
@@ -41,27 +41,31 @@ export const Input = styled.input`
       inset 0 0 0 60px rgba(0, 0, 0, 0), 0 1px rgba(133, 23, 23, 0.08);
   }
 `;
-export const Button = styled.button`
+export const Chip = styled.button`
   text-align: center;
 
-  display: inline-block;
+  display: flex;
   border: none;
   outline: none;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 5px;
   font-size: 16px;
   text-decoration: none;
-  margin: 10px;
+  margin: 5px;
   color: white;
   background: #7ca78c;
 
   box-shadow: rgb(0 0 0 / 64%) 10px 10px 5px 0px;
   transition: 0.3s;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
   &:hover {
     background: #8ebe9f;
     box-shadow: rgb(0 0 0 / 64%) 10px 10px 5px 0px;
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    transform: scale(1.15);
+    transform: scale(1.3);
   }
 `;
