@@ -28,14 +28,14 @@ export class App extends Component {
         }));
   };
 
-  onChangeFilter = evt => {
-    this.setState({ filter: evt.currentTarget.value });
-  };
-
   deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
+  };
+
+  onChangeFilter = evt => {
+    this.setState({ filter: evt.currentTarget.value });
   };
   onFilterContacts = () => {
     const { contacts, filter } = this.state;
